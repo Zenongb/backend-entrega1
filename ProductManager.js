@@ -1,7 +1,7 @@
 
 class ProductManager {
-  constructor() {
-    this.products = []
+  constructor(path) {
+    this.path = path
   }
   getProducts() {
     return this.products.map(p => p.toPOJO())
@@ -20,6 +20,8 @@ class ProductManager {
     if (!prod) throw new Error(`No se encontro producto con id ${id}`)
     return prod.toPOJO()
   }
+
+  // getter y setter para la var products que utiliza el paquete fs
 }
 
 
